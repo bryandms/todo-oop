@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo App</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+</head>
+<body>
+    <nav class="ui secondary pointing menu">
+        <a class="header item" href="./index.html">
+            Todo App
+        </a>
+    </nav>
+
+    <div id="content" class="ui container">
+        <section id="app" class="ui grid">
+
+            <!-- Form -->
+            <div class="six wide column">
+                <div class="ui raised card">
+                    <div class="content">
+                        <div class="header">Add Task</div>
+                    </div>
+                    <div class="content">
+                        <form id="task-form" class="ui form">
+                            <div class="field">
+                                <label>Name</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div class="grouped fields">
+                                <label for="priority">Priority</label>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="priority" checked="" tabindex="0" class="hidden" value="High">
+                                        <label>High</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="priority" tabindex="0" class="hidden" value="Medium">
+                                        <label>Medium</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="priority" tabindex="0" class="hidden" value="Low">
+                                        <label>Low</label>
+                                    </div>
+                                </div>
+                                <button class="fluid ui purple basic button" type="submit">
+                                    Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tasks -->
+            <div class="ten wide column">
+                <section id="task-list" class="ui one column grid"></section>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
